@@ -39,7 +39,7 @@ def saveInfo(array):
         return -1
     with open("BlogArchive.txt", "w") as f:
         for i in range(len(array)):
-            f.writelines("%s - %s" % (array[i][0],  array[i][1]))
+            f.writelines("(%s)-(%s)\n" % (array[i][1],  array[i][0]))
         return 0
 
 
@@ -47,4 +47,3 @@ def saveInfo(array):
 if __name__ == "__main__":
     retBlog = pullBlog('https://nlls1990.github.io/archive')
     saveInfo(retBlog)
-    print(retBlog)
